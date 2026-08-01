@@ -4,7 +4,7 @@ A retail analytics case study for a supermarket chain, examining the **Chips (Sn
 
 This project mirrors a real-world category manager / retail analytics workflow: clean and explore transactional data, profile customer segments, then run an experimental analysis to measure the uplift from a trial store layout change.
 
-## 📊 Project Overview
+## Project Overview
 
 The analysis is split into two parts:
 
@@ -25,50 +25,35 @@ The analysis is split into two parts:
 - Compared trial vs. control store performance before and after the layout change
 - Found that trial stores significantly outperformed their control stores during the trial period (Feb–Apr), confirming the new layout drove a real uplift in sales
 
-### 📁 Presentation
+### Presentation
 `reports/chips_category_review_presentation.pdf` — executive summary deck presenting key findings and recommendations to stakeholders (holiday promotional displays, targeting Young/Older Families for basket growth, rollout of the new store layout).
 
-## 🗂 Repository Structure
+## Repository Structure
 
 ```
 .
 ├── data/
 │   ├── QVI_transaction_data.csv       # Raw transaction-level data
 │   └── QVI_purchase_behaviour.csv     # Customer lifestage & affluence segments
+│   └── merged_chip_data.csv           # Cleaned and Merged Transaction and Purchase data
 ├── notebooks/
 │   ├── 01_category_analysis.ipynb     # Data cleaning, EDA, segment profiling
 │   └── 02_trial_store_analysis.ipynb  # Control store selection & uplift testing
 ├── reports/
 │   └── chips_category_review_presentation.pdf
-├── requirements.txt
 └── README.md
 ```
 
-## 🔑 Key Findings
+## Key Findings
 
 - **Seasonality**: Chip transactions are stable year-round with a clear spike the week before Christmas — an opportunity for promotional displays/gondola ends.
 - **Core shopper**: Mainstream Young Singles & Couples are the largest chip-buying segment.
 - **Growth opportunity**: Young and Older Families (26% of chip shoppers) purchase larger baskets on average, offering room to grow spend per customer.
 - **Trial success**: The new store layout produced a measurable sales uplift in trial stores relative to matched control stores from February through April.
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - Python (pandas, numpy)
 - matplotlib, seaborn for visualization
 - scipy for statistical testing
 - Jupyter notebooks (originally built in Google Colab)
-
-## 🚀 Getting Started
-
-```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
-pip install -r requirements.txt
-jupyter notebook notebooks/01_category_analysis.ipynb
-```
-
-> Note: notebook paths have been updated to run locally (no Google Drive mount needed). Run `01_category_analysis.ipynb` first — it produces `data/merged_chip_data.csv`, which `02_trial_store_analysis.ipynb` then uses.
-
-## 📄 License
-
-This project uses a publicly available retail analytics dataset for educational/portfolio purposes.
